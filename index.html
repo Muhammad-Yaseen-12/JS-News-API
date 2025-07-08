@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New News</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000;
+        }
+        .lead{
+            color: #000 !important;
+            font-weight: bold;
+        }
+
+        .search-box {
+            max-width: 700px;
+            margin: -50px auto 50px;
+            background: white;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .search-box:hover {
+            transform: scale(1.02);
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            transition: 0.3s;
+        }
+
+        .btn-custom {
+            background-color: #ff5e57;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff3b30;
+        }
+
+        .news-container {
+            padding-bottom: 50px;
+        }
+        .mainDiv h1{
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">📰 New News</a>
+        </div>
+    </nav>
+
+
+    <div class="hero">
+        <h1>Stay Updated</h1>
+        <p class="lead">Get the latest news instantly</p>
+    </div>
+
+
+    <div class="container">
+        <div class="search-box p-3 d-flex">
+            <input type="text" id="search" class="form-control form-control-lg border-0" placeholder="Search for news..." onkeydown="if(event.key==='Enter') search()">
+            <button class="btn btn-custom btn-lg ms-2" onclick="search()">Search</button>
+        </div>
+    </div>
+
+
+    <div class="container news-container">
+        <div class="row mainDiv g-4">
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
